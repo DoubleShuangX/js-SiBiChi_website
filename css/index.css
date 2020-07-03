@@ -1,0 +1,620 @@
+/* 初始化样式 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* header样式 */
+header{
+    background: white;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 2px 0 gray;
+    z-index: 99;
+}
+header .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+header .wrap ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+header .wrap ul li{
+    margin-right: 30px;
+}
+header .wrap ul li span{
+    cursor: pointer;
+}
+header .wrap ul li span.selected{
+    color: blue;
+    font-weight: bold;
+}
+
+/* main样式 */
+main{
+    padding-top: 60px;
+
+}
+main .banner{
+    background: #4F78FF url(../images/MainBgImg.png) no-repeat center;
+    height: 580px;
+    background-size: cover;
+}
+main .banner .contentWrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+main .banner .content{
+    width: 580px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+main .banner .content .p1{
+    font-weight: bold;
+    font-size: 44px;
+    margin-bottom: 30px;
+}
+main .banner .content .p2,main .banner .content .p3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+main .banner .img{
+    width: 580px;
+    height: 580px;
+}
+main .productInfo{
+    margin-top: 90px;
+}
+main .productInfo .contentWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+main .productInfo .contentWrap .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    background: pink;
+    background: url(../images/quanbg.png) no-repeat;
+    background-size: contain;
+    margin-bottom: 50px;
+}
+main .productInfo .contentWrap .title .zh{
+    font-size: 30px;
+    font-family: " Microsoft YaHei";
+    font-weight: 400;
+    color: rgb(21, 21, 57);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+main .productInfo .contentWrap .title .en{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(21,21,57,.6);
+}
+main .productInfo .contentWrap .lists{
+    display: flex;
+    width: 100%;
+}
+main .productInfo .contentWrap .lists .list{
+    height: 450px;
+    width: 200px;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+main .productInfo .contentWrap .lists .list .wrapper{
+    width: 198px;
+    height: 403px;
+    padding-left: 40px; 
+    padding-top: 110px;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+}
+main .productInfo .contentWrap .lists .list:hover .wrapper{
+    box-shadow: 0px 14px 39px -17px rgba(70, 112, 255, 0.4);
+}
+main .productInfo .contentWrap .lists .list:nth-child(1){
+    background: transparent url(../images/robotpr1.png);
+    background-size: 100% 100%;
+}
+main .productInfo .contentWrap .lists .list:nth-child(2){
+    background: transparent url(../images/robotpr2.png);
+    background-size: 100% 100%;
+}
+main .productInfo .contentWrap .lists .list:nth-child(3){
+    background: transparent url(../images/robotpr3.png);
+    background-size: 100% 100%;
+}
+main .productInfo .contentWrap .lists .list:nth-child(4){
+    background: transparent url(../images/robotpr4.png);
+    background-size: 100% 100%;
+}
+main .productInfo .contentWrap .lists .list:nth-child(5){
+    background: transparent url(../images/robotpr5.png);
+    background-size: 100% 100%;
+}
+main .productInfo .contentWrap .lists .list:not(:last-child){
+    margin-right: 50px;
+}
+main .productInfo .contentWrap .lists .list .theme{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+main .productInfo .contentWrap .lists .list .theme .zh{
+    height: 18px;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+main .productInfo .contentWrap .lists .list .theme .en{
+    font-size: 12px;
+    color: rgba(21,21,57,.7);
+}
+main .productInfo .contentWrap .lists .list ul{
+    
+}
+main .productInfo .contentWrap .lists .list ul li::before{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: blue;
+    margin-right: 10px;
+}
+main .productInfo .contentWrap .lists .list ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #8a8a9c;
+    cursor: pointer;
+}
+
+/* 解决方案 */
+main .solutionCase{
+    margin-top: 90px;
+}
+main .solutionCase .contentWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+main .solutionCase .contentWrap .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    background: pink;
+    background: url(../images/quanbg.png) no-repeat;
+    background-size: contain;
+    margin-bottom: 50px;
+}
+main .solutionCase .contentWrap .title .zh{
+    font-size: 30px;
+    font-family: " Microsoft YaHei";
+    font-weight: 400;
+    color: rgb(21, 21, 57);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+main .solutionCase .contentWrap .title .en{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(21,21,57,.6);
+}
+main .solutionCase .contentWrap .content{
+    display: flex;
+    height: 316px;
+}
+main .solutionCase .contentWrap .content ul{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    padding-right: 18px;
+    box-sizing: border-box;
+}
+main .solutionCase .contentWrap .content li{
+    height: 64px;
+    background: url(../images/maopao.png) no-repeat;
+    text-align: center;
+    line-height: 64px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 0;
+    transition: all 0.5s ease;
+    font-size: 16px;
+    cursor: pointer;
+    background-size: cover;
+}
+main .solutionCase .contentWrap .content li.selected{
+    color: #FFFFFF;
+    background: url(../images/maopaoOn.png);
+    background-size: 100% 100%;
+    font-size: 20px;
+    box-shadow: 0px 24px 20px -17px #9CB2FF;
+    left: 18px;
+}
+main .solutionCase .contentWrap .content li:last-child{
+    margin-bottom: 0;
+}
+main .solutionCase .contentWrap .content .imgs{
+    width: 990px;
+    height: 316px;
+}
+main .solutionCase .contentWrap .content .imgs img{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+main .solutionCase .contentWrap .content .imgs .img1{
+    display: block;
+}
+
+/* 技术优势 */
+main .technical{
+    margin-top: 90px;
+}
+main .technical .contentWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+main .technical .contentWrap .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 80px;
+    margin: 0 auto;
+    background: pink;
+    background: url(../images/quanbg.png) no-repeat;
+    background-size: contain;
+    margin-bottom: 50px;
+    background-position: 17px 2px;
+}
+main .technical .contentWrap .title .zh{
+    font-size: 30px;
+    font-family: " Microsoft YaHei";
+    font-weight: 400;
+    color: rgb(21, 21, 57);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+main .technical .contentWrap .title .en{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(21,21,57,.6);
+}
+main .technical .contentWrap .content{
+    height: 387px;
+    display: flex;
+    justify-content: space-around;
+}
+main .technical .contentWrap .content .l{
+    box-sizing: border-box;
+    background: url(../images/technicalbg.png);
+    background-size: 100% 100%;
+    width: 577px;
+    padding-top: 42px;
+    padding-left: 45px;
+    height: 100%;
+}
+main .technical .contentWrap .content .theme{
+    color: #151539;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+main .technical .contentWrap .content ul{
+
+}
+main .technical .contentWrap .content ul li{
+    margin-bottom: 15px;
+}
+main .technical .contentWrap .content ul li .p1{
+    color: rgba(21,21,57,.8);
+    margin-bottom: 5px;
+    font-size: 0;
+}
+main .technical .contentWrap .content ul li .p1 img{
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+main .technical .contentWrap .content ul li .p1 span{
+    font-size: 18px;
+    vertical-align: middle;
+}
+main .technical .contentWrap .content ul li .p2{
+    color: rgba(138,138,156,1);
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-left: 26px;
+    
+}
+main .technical .contentWrap .content .r{
+    box-sizing: border-box;
+    background: url(../images/technicalbg.png);
+    background-size: 100% 100%;
+    width: 577px;
+    padding-top: 42px;
+    padding-left: 45px;
+    height: 100%;
+}
+
+/* 服务支持 */
+main .service{
+    margin-top: 90px;
+}
+main .service .contentWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+main .service .contentWrap .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    background: pink;
+    background: url(../images/quanbg.png) no-repeat;
+    background-size: contain;
+    margin-bottom: 70px;
+}
+main .service .contentWrap .title .zh{
+    font-size: 30px;
+    font-family: " Microsoft YaHei";
+    font-weight: 400;
+    color: rgb(21, 21, 57);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+main .service .contentWrap .title .en{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(21,21,57,.6);
+}
+main .service .contentWrap ul{
+    width: 100%;
+    height: 185px;
+    display: flex;
+}
+main .service .contentWrap ul li{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .service .contentWrap ul li img{
+    width: 100px;
+    height: 100px;
+}
+main .service .contentWrap ul li .s1{
+    margin: 25px 0 8px;
+    font-size: 24px;
+    color: rgba(21,21,57,1);
+}
+main .service .contentWrap ul li .s2{
+    font-size: 14px;
+    color: rgba(138,138,156,1);
+}
+
+/* 客户介绍 */
+main .customer{
+    margin-top: 90px;
+}
+main .customer .contentWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+main .customer .contentWrap .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    background: pink;
+    background: url(../images/quanbg.png) no-repeat;
+    background-size: contain;
+    margin-bottom: 70px;
+}
+main .customer .contentWrap .title .zh{
+    font-size: 30px;
+    font-family: " Microsoft YaHei";
+    font-weight: 400;
+    color: rgb(21, 21, 57);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+main .customer .contentWrap .title .en{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(21,21,57,.6);
+}
+main .customer .contentWrap .content{
+    display: flex;
+}
+main .customer .contentWrap .content .l{
+    width: 630px;
+    height: 400px;
+    background: url(../images/pinpaibg.png);
+    background-size: 100% 100%;
+    background-position: 0 16px;
+    margin-right: 25px;
+}
+main .customer .contentWrap .content .r{
+    
+}
+
+/* 关于我们 */
+main .about{
+    margin-top: 90px;
+    padding-bottom: 50px;
+}
+main .about .contentWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+main .about .contentWrap .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    background: pink;
+    background: url(../images/quanbg.png) no-repeat;
+    background-size: contain;
+}
+main .about .contentWrap .title .zh{
+    font-size: 30px;
+    font-family: " Microsoft YaHei";
+    font-weight: 400;
+    color: rgb(21, 21, 57);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+main .about .contentWrap .title .en{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(21,21,57,.6);
+}
+main .about .contentWrap .content{
+    display: flex;
+    align-items: center;
+    background: url(../images/aboutUsbg.png);
+    background-size: 100% 100%;
+    height: 312px;
+}
+main .about .contentWrap .content .l{
+    width: 600px;
+    box-sizing: border-box;
+    border-right: 1px solid gray;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+main .about .contentWrap .content .l img{
+    width: 470px;
+    height: 100%;
+}
+main .about .contentWrap .content .r{
+    width: 600px;
+}
+main .about .contentWrap .content .r p{
+    width: 470px;
+    margin: 0 auto;
+    color: #777791;
+    font-size: 16px;
+}
+main .about .contentWrap .content .r .p1{
+    margin-bottom: 20px;
+}
+
+footer{
+    height: 60px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+footer .bah{
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    color: rgba(184,184,195,1);
+}
+footer .bah a{
+    
+}
+footer .bah span{
+    
+}
+
+.socketWrap{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.socketWrap .title{
+    font-size: 22px;
+    margin-bottom: 20px;
+    background: #00AEF3;
+    width: 100%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin: 0;
+}
+.socket{
+    padding: 20px;
+}
+.socket .sayList{
+    height: 220px;
+    width: 220px;
+    border: 1px solid gainsboro;
+    background: white;
+    overflow: auto;
+}
+.socket .sendContent{
+    width: 220px;
+    border: 1px solid gainsboro;
+    border-top: 0;
+    background: white;
+}
+.socket .content1{
+    resize: none;
+    width: 220px;
+    height: 50px;
+    border: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+.socket .send{
+    border: 0;
+    background: #208FE0;
+    color: white;
+    padding: 5px 15px;
+    display: block;
+    margin-left: auto;
+    outline: none;
+}

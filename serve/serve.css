@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+ul{
+    list-style: none;
+}
+.serve{
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    height: 100vh;
+}
+.user_list{
+    
+}
+.user_list li{
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+    justify-content: space-around;
+}
+.user_list li .user_img{
+    width: 6rem;
+    height: 6rem;
+}
+.user_list li img{
+    height: 100%;
+    width: 100%;
+}
+.user_list li .user_info{
+    
+}
+.user_list li .user_name{
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+}
+.user_list li .content{
+    font-size: 1.2rem;
+    color: gray;
+    width: 25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.user_list li .time{
+    align-self: flex-start;
+    width: 4rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: gray;
+}

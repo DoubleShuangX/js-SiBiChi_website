@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable='no'">
+    <title>Document</title>
+    <link rel="stylesheet" href="serve.css">
+    <style>
+
+    </style>
+</head>
+<script>
+    function resize(){
+        var docEl = document.documentElement || document.body;
+        var clientWidth = window.innerWidth;
+        if(clientWidth <= 320){
+            docEl.style.fontSize = '50px';
+        }else if(clientWidth >= 640){
+            docEl.style.fontSize = '100px';
+        }else{
+            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+        }
+    }
+   resize();
+</script>
+<body>
+    <div class="serve">
+        <ul class="user_list">
+            <li pid="1">
+                <div class="user_img">
+                    <img src="./user_img.png" alt="">
+                </div>
+                <div class="user_info">
+                    <p class="user_name">匿名用户</p>
+                    <p class="content">该客服发送了一条消息，需要您立刻回复，谢谢</p>
+                </div>
+                <span class="time">19:00</span>
+            </li>
+            <li pid="2">
+                <div class="user_img">
+                    <img src="./user_img.png" alt="">
+                </div>
+                <div class="user_info">
+                    <p class="user_name">匿名用户</p>
+                    <p class="content">该客服发送了一条消息，需要您立刻回复，谢谢</p>
+                </div>
+                <span class="time">19:00</span>
+            </li>
+            <li pid="3">
+                <div class="user_img">
+                    <img src="./user_img.png" alt="">
+                </div>
+                <div class="user_info">
+                    <p class="user_name">匿名用户</p>
+                    <p class="content">该客服发送了一条消息，需要您立刻回复，谢谢</p>
+                </div>
+                <span class="time">19:00</span>
+            </li>
+        </ul>
+    </div>
+    <script src="./jquery.min.js"></script>
+    <script src="./serve.js"></script>
+</body>
+</html>

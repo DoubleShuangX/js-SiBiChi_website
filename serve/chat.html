@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天界面</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        header{
+            width: 100%;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding-left: 1rem;
+        }
+        header img{
+            height: 2.4rem;
+            width: 2.4rem;
+            margin-right: 2rem;
+        }
+        header span{
+            font-size: 1.8rem;
+            height: 2.4rem;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid gainsboro;
+            box-sizing: border-box;
+            background: #f4f4f4;
+        }
+        footer input{
+            border: 0;
+            width: 26rem;
+            height: 3.4rem;
+            margin-right: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            box-sizing: border-box;
+            outline: none;
+        }
+        footer button{
+            border: 0;
+            background: green;
+            color: white;
+            height: 3.4rem;
+            padding: 0 1.5rem;
+            letter-spacing: 2px;
+            outline: none;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    function resize(){
+        var docEl = document.documentElement;
+        var clientWidth = window.innerWidth;
+        if(clientWidth <= 320){
+            docEl.style.fontSize = '50px';
+        }else if(clientWidth >= 640){
+            docEl.style.fontSize = '100px';
+        }else{
+            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+        }
+    }
+   resize();
+</script>
+<body>
+    <header>
+        <img src="./back.png" alt="">
+        <span>匿名用户</span>
+    </header>
+    <style>
+        main{
+
+        }
+        main ul{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1rem;
+            list-style: none;
+            padding-bottom: 5rem;
+}
+        }
+        main ul li{
+            width: 100%;
+        }
+        main ul li{
+            margin-bottom: 1.5rem;
+        }
+        main ul li.user{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        main ul li.user .user_name{
+            font-size: 1.4rem;
+            width: 5rem;
+        }
+        main ul li.user .user_content{
+            font-size: 1.4rem;
+            max-width: 26rem;
+            background: white;
+            box-sizing: border-box;
+            padding: 1rem;
+            position: relative;
+        }
+        main ul li.user .user_content::before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 1rem solid transparent;
+            border-right-color: white;
+            left: -2rem;
+        }
+        main ul li.my{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        main ul li.my .my_name{
+            font-size: 1.4rem;
+            width: 3.5rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+        main ul li.my .my_content{
+            font-size: 1.4rem;
+            max-width: 26rem;
+            background: #9EEA6A;
+            box-sizing: border-box;
+            padding: 1rem;
+            position: relative;
+        }
+        main ul li.my .my_content::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 1rem solid transparent;
+            border-left-color: #9EEA6A;
+            right: -2rem;
+            top: .8rem;
+        }
+    </style>
+    <main>
+        <ul>
+            <li class="user">
+                <span class="user_name">用户 : </span>
+                <span class="user_content">你们这个平台大概一年需要多少费用，我们可能买的年限比较久，可以便宜一点吗？</span>
+            </li>
+            <li class="my">
+                <span class="my_content">可以的，亲</span>
+                <span class="my_name"> : 我</span>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <input class="ipt" type="text" placeholder="请输入信息">
+        <button class="send">发送</button>
+    </footer>
+    <script src="./jquery.min.js"></script>
+    <script>
+        window.onresize = function(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 37.5 + 'px'
+        }
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 37.5 + 'px'
+        $('.send').click(function(){
+            let val = $('.ipt').val();
+            let li = $(`<li class="my">
+                            <span class="my_content">${val}</span>
+                            <span class="my_name"> : 我</span>
+                        </li>`)
+            $('ul').append(li)
+            $('.ipt').val('')
+        })
+    </script>
+</body>
+</html>
